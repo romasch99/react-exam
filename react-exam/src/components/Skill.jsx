@@ -9,6 +9,7 @@ export const Skill = ({skill}) => {
                 <CardHeader>{skill.title}</CardHeader>
             </CardItem>
             <CardContent>
+                <CardNote>{skill.id}</CardNote>
                 <CardNote>{skill.description}</CardNote>
             </CardContent>
         </Card>
