@@ -14,24 +14,24 @@ Kokius puslapius sukurti?
 
 -- Register
 Ðis puslapis turës meniu juostà (logotipas, login ir register nuorodos), formà su el. paðtu ir slaptaþodþiu – ávedus kreipiasi 
-á serverá (https://autumn-delicate-wilderness.glitch.mev1/auth/register). Sëkminga ar nesëkminga registracija iðmeta notificationà 
+á serverá (https://autumn-delicate-wilderness.glitch.me/v1/auth/register). Sëkminga ar nesëkminga registracija iðmeta notificationà 
 (áskaièiuoti visus ámanomus error handlingus). Serveris gràþina tik du: 200 arba 400.
 
 --- Login
 Ðis puslapis turës meniu juostà (logotipas, login ir register nuorodos), formà su el. paðtu ir slaptaþodþiu – ávedus kreipiasi á serverá
- (https://autumn-delicate-wilderness.glitch.mev1/auth/login). 
+ (https://autumn-delicate-wilderness.glitch.me/v1/auth/login). 
 Jei sëkmingai – nukreipia á Home, jei ne – iðmetà notification klaidà (áskaièiuoti visus ámanomus error handlingus). 
 Serveris gràþina tik du: 200 arba 400.
 
 -- Home (patekti galima tik prisijungus – router blocking)
 Ðis puslapis turës meniu juostà (logotipas, home ir add nuorodos <- skirtingai nei login/register puslapiuose) bei kortelëse 
 (t.y. staèiakampiuose, dizainas nesvarbu) atvaizduos áraðus 
-(atsisiøstus ið https://autumn-delicate-wilderness.glitch.mev1/content/skills). 
+(atsisiøstus ið https://autumn-delicate-wilderness.glitch.me/v1/content/skills). 
 Kol jie neuþsikrovë – iðmeta errorà. Jei nëra nei vieno áraðo – iðmeta, kad nëra áraðø.
 
 -- Add (patekti galima tik prisijungus – router blocking)
 Ðis puslapis turës meniu juostà (logotipas, home ir add nuorodos) bei formà (t.y. title – input text ir description - textarea), 
-kuriuos uþpildþius – iðsiøs á serverá (https://autumn-delicate-wilderness.glitch.mev1/content/skills). Bet koká atsakà, 
+kuriuos uþpildþius – iðsiøs á serverá (https://autumn-delicate-wilderness.glitch.me/v1/content/skills). Bet koká atsakà, 
 sëkmingà ar ne, atvaizduojame su notificationu.
 Uþduoties ákëlimo instrukcijos
 
