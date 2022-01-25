@@ -1,0 +1,57 @@
+React atsiskaityma   ( react-exam )
+
+Darysime tik frontend su React - backend'as yra pateiktas.
+
+Apie React: Pradedame nuo create-react-app (npx create-react-app react-exam), ásidiegiame styled-components  
+(CSS frameworkø naudoti negalime), react-router-dom (naudosim lazy loading) ir kitus reikalingus modulius. 
+Bûtina naudoti DotEnv. Dizainas nesvarbu, bet stenkitës iðlaikyti bendrà tvarkà.
+ 
+
+BASE_URL = https://autumn-delicate-wilderness.glitch.me ideti i .env  `${process.env.REACT_APP_BASE_URL}/v1/...`
+                                                                           
+
+Kokius puslapius sukurti?
+
+-- Register
+Ðis puslapis turës meniu juostà (logotipas, login ir register nuorodos), formà su el. paðtu ir slaptaþodþiu – ávedus kreipiasi 
+á serverá (https://autumn-delicate-wilderness.glitch.mev1/auth/register). Sëkminga ar nesëkminga registracija iðmeta notificationà 
+(áskaièiuoti visus ámanomus error handlingus). Serveris gràþina tik du: 200 arba 400.
+
+--- Login
+Ðis puslapis turës meniu juostà (logotipas, login ir register nuorodos), formà su el. paðtu ir slaptaþodþiu – ávedus kreipiasi á serverá
+ (https://autumn-delicate-wilderness.glitch.mev1/auth/login). 
+Jei sëkmingai – nukreipia á Home, jei ne – iðmetà notification klaidà (áskaièiuoti visus ámanomus error handlingus). 
+Serveris gràþina tik du: 200 arba 400.
+
+-- Home (patekti galima tik prisijungus – router blocking)
+Ðis puslapis turës meniu juostà (logotipas, home ir add nuorodos <- skirtingai nei login/register puslapiuose) bei kortelëse 
+(t.y. staèiakampiuose, dizainas nesvarbu) atvaizduos áraðus 
+(atsisiøstus ið https://autumn-delicate-wilderness.glitch.mev1/content/skills). 
+Kol jie neuþsikrovë – iðmeta errorà. Jei nëra nei vieno áraðo – iðmeta, kad nëra áraðø.
+
+-- Add (patekti galima tik prisijungus – router blocking)
+Ðis puslapis turës meniu juostà (logotipas, home ir add nuorodos) bei formà (t.y. title – input text ir description - textarea), 
+kuriuos uþpildþius – iðsiøs á serverá (https://autumn-delicate-wilderness.glitch.mev1/content/skills). Bet koká atsakà, 
+sëkmingà ar ne, atvaizduojame su notificationu.
+Uþduoties ákëlimo instrukcijos
+
+1. Sukurti GitHub repozitorijà.
+
+Instrukcijas, kaip susikurti GitHub repozitorijà rasite - 
+https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/creating-a-repository-on-github/creating-a-new-repository
+
+2. Pakeitimus daryti atskiroje ðakoje (pvz. dev), kad bûtø galima sukurti Pull Request.
+
+Kaip galima sukurti Pull Request galite suþinoti èia - 
+https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
+
+Naujà ðakà galima susikurti ávykdþius `git checkout -b dev` komandà terminale.
+
+3. Kuriant sistemà pakeitimus nuolatos saugoti su pakeitimus su prasmingomis "commit" þinutëmis.
+
+4. Pabaigus projektà patikrinti ar visi pakeitimai yra nusiøsti á GitHub, sukurti Pull Request per GitHub puslapá á pagrindinæ ðakà 
+(`main` arba `master`) ir pateikti nuorodà ðiame "assignment".
+
+Jeigu to padaryti nepavyks galite tiesiog ákelti archyvuotus failus.
+
+Sëkmës!
