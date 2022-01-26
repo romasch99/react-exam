@@ -4,6 +4,7 @@ import {useAuth} from "../hooks/useAuth";
 import {Skill} from "../components/Skill";
 import {SkillsApi} from "../services/skills-api";
 import {BlockFlex} from "../ui/atoms/Block"
+import {CardHeader} from "../ui/atoms/CardElements"
 
 export const Home = () => {
     const {token} = useAuth();
@@ -39,9 +40,9 @@ export const Home = () => {
         <div>Loading...</div>
     ) : (
         <div className="list">
-            <header>
+            <CardHeader>
                 <div>Skills List</div>
-            </header>
+            </CardHeader>
                 <BlockFlex>{renderedSkills}</BlockFlex>
         </div>
     );
