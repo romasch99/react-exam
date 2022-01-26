@@ -13,7 +13,7 @@ import {CardButton} from "../atoms/CardElements"
 export const Navbar = ({goLogin, goRegister}) => {
     const auth = useAuth();
     
-    const staskillMenu = auth.token ? ( 
+    const skillMenu = auth.token ? ( 
         <NavMenu>
             <NavLink to='/' >
                 Skills
@@ -47,7 +47,7 @@ export const Navbar = ({goLogin, goRegister}) => {
         <>
         <Nav>
             {loginButtons}
-            {staskillMenu}
+            {skillMenu}
         </Nav>
         </>
   );

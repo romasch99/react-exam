@@ -32,10 +32,12 @@ export const CardContent = styled.div`
   padding-left: 32px;
 `;
 
-export const CardNote = styled.p`
+export const CardNote = styled.div`
   // padding-top: 8px;
   // display: block;
   // width: 100%;
+  overflow: hidden;
+  text-overflow:ellipsis;
   font-size: 0.7rem;
   text-align: center;
   // text-transform: uppercase;
@@ -53,7 +55,7 @@ export const CardButton = styled.button`
   width:  ${props => props.inputWidht || `30%`};
   height:  ${props => props.inputHeight || `35px`};
   margin:   ${props => props.inputMarginTop || `0`} 0.5rem ;
-  padding: 0.35rem 0 0.55rem;
+  padding: 0.35rem 0 0.35rem 0;
   font-family: inherit;
   font-size: ${props => props.inputFontSize || `14px`};
   justify-content: center;

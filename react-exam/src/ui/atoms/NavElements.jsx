@@ -6,14 +6,13 @@ export const Nav = styled.nav`
   height: 65px;
   display: flex;
   justify-content: space-between;
-  padding: 0.2rem calc((100vw - 90vw) / 2);
+  padding: 0.2rem calc((100vw - 90vw) / 2) 1.2rem;
   z-index: 12;
   /* justify-content: flex-start; */
 `;
   
 export const NavLink = styled(Link)`
   color: #808080;
-  // color:  #f39c12;
   display: flex;
   align-items: center;
   text-decoration: none;
@@ -31,22 +30,12 @@ export const NavStart = styled.div`
 `;
 
 export const NavImg = styled.img`
-  margin: 12px 40px 0 0;
+  margin: 18px 40px 0 0;
   height: 32px;
   width: 32px;
   box-sizing: content-box;
 `;
 
-export const NavIcon = styled.svg`
-  flex: none;
-  transition: fill 0.25s;
-  width: 48px;
-  height: 48px;
-
-  ${Link}:hover & {
-    fill: rebeccapurple;
-  }
-`;    
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
