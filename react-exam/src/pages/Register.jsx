@@ -52,5 +52,4 @@ export const Register = () => {
             </CardContent>
         </Card>
     );
-
 };

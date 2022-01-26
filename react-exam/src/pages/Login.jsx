@@ -28,7 +28,7 @@ export const Login = () => {
             return;
         }
 
-        navigate("/home");
+        navigate("/");
     };
 
     return (

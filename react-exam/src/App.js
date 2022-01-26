@@ -1,23 +1,45 @@
 import './App.css';
-import {BrowserRouter as Router, Route, Routes, Navigate } from "react-router-dom";
+import {Route, Routes, Navigate, useNavigate} from "react-router-dom";
 import {Login} from "./pages/Login"
 import {Register} from "./pages/Register"
 import {Home} from "./pages/Home"
 import {AddSkill} from "./pages/AddSkill"
+import {Navbar} from "./ui/molecules/Nav"
+import {AuthProvider} from "./components/AuthProvider";
+import {RequireAuth} from "./components/RequireAuth";       
 
 function App() {
+  const navigate = useNavigate();
+  
+  const goLogin = () => {
+    navigate(`/login`);
+  };
+  
+  const goRegister = () => {
+    navigate(`/register`);
+  };
+  
   return (
-    <Router>
+    <AuthProvider>
+      <Navbar goLogin={() => goLogin()} goRegister={() => goRegister()} />
       <Routes>
         <Route>
-          <Route path="/" element={<Login />} />
+          <Route path="/" 
+            element={
+              <RequireAuth><Home /></RequireAuth>
+            } 
+          />
+          <Route path="/add" 
+            element={
+              <RequireAuth><AddSkill /></RequireAuth>
+            } 
+          />
+          <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/add" element={<AddSkill />} />
           <Route path="*" element={<Navigate to="/404" />} />
         </Route>  
       </Routes>  
-    </Router>
+    </AuthProvider>  
   );
 }
 
