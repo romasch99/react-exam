@@ -41,10 +41,10 @@ export const Register = () => {
             <CardContent>
                 <form onSubmit={handleSubmit}>
                     <CardItemSmall>
-                        <Field label= "Email" onChange={onEmailChange} name="email" type="email" placeholder="email@email.com" required />
+                        <Field label= "Email:" onChange={onEmailChange} name="email" type="email" placeholder="email@email.com" required />
                     </CardItemSmall>    
                     <CardItemSmall>
-                        <Field label= "Password" onChange={onPasswordChange} name="password" type="password" placeholder="password" required minLength={8} />
+                        <Field label= "Password:" onChange={onPasswordChange} name="password" type="password" placeholder="password" required minLength={8} />
                     </CardItemSmall>
                     <CardItemSmall>
                         <CardButton  inputColor = {!email || !password ? "#ebedef" : "#138d83d7"} inputWidht = "10%" type="submit" disabled={!email || !password}>Register</CardButton>

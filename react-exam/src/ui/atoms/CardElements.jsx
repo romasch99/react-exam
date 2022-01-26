@@ -49,17 +49,15 @@ export const CardButtons = styled.div`
 `;
 
 export const CardButton = styled.button`
-  // display: block;
   margin-top: 1rem;
-  width: 100%;
   width:  ${props => props.inputWidht || `30%`};
   height:  ${props => props.inputHeight || `35px`};
-  // margin: 0 0.4rem ;
-  margin:  ${props => props.inputMarginTop || `0`} 0.4rem ;
-  padding: 0.57rem 0;
+  margin:   ${props => props.inputMarginTop || `0`} 0.5rem ;
+  padding: 0.35rem 0 0.55rem;
   font-family: inherit;
-  // font-size: 14px;
   font-size: ${props => props.inputFontSize || `14px`};
+  justify-content: center;
+  align-items: center;
   font-weight: 700;
   color: #fff;
   background-color: ${props => props.inputColor || `#e5195f`};

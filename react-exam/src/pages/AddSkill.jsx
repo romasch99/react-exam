@@ -47,10 +47,10 @@ export const AddSkill = () => {
             <CardContent>
                 <form onSubmit={handleSubmit}>
                     <CardItemSmall>
-                        <Field label= "Title" onChange={onTitleChange} name="title" placeholder="Title" type="text" required />
+                        <Field label= "Title:" onChange={onTitleChange} name="title" placeholder="Title" type="text" required />
                     </CardItemSmall>
                     <CardItemSmall>
-                        <Label name="description">Description</Label>
+                        <Label name="description">Description:</Label>
                         <Textarea onChange={onDescription} name="description" placeholder="Description" required />
                     </CardItemSmall>
                     <CardItemSmall>
