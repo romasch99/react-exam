@@ -24,7 +24,7 @@ export const AuthProvider = ({children}) => {
     const login = async (user, password) => {
         const res = await Auth.login(user, password);
 
-        if (res.error) {
+        if (res.err) {
             console.error(res.err);
 
             setState({error: res.err, token: null});

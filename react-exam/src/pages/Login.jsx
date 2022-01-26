@@ -9,7 +9,7 @@ export const Login = () => {
     const {login, error} = useAuth();
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
-    
+     
     const onEmailChange = (e) => {
         setEmail(e.target.value);
     };
@@ -22,9 +22,13 @@ export const Login = () => {
         e.preventDefault();
         if (!email || !password) return;
 
+        console.log('Login');
+        console.log(email, password);
         const res = await login(email, password);
 
-        if (res.error) {
+        console.log(res);
+        console.log('Error: ' + res.err);
+        if (res.err) {
             return;
         }
 
@@ -37,13 +41,13 @@ export const Login = () => {
             <CardContent>
                 <form onSubmit={handleSubmit}>
                     <CardItemSmall>
-                        <Field label= "Email" onChange={onEmailChange} name="email" type="email" placeholder="email@email.com" required />
+                        <Field label= "Email:" onChange={onEmailChange} name="email" type="email" placeholder="email@email.com" required />
                     </CardItemSmall>    
                     <CardItemSmall>
-                        <Field label= "Password" onChange={onPasswordChange} name="password" type="password" placeholder="password" required minLength={8} />
+                        <Field label= "Password:" onChange={onPasswordChange} name="password" type="password" placeholder="password" required minLength={8} />
                     </CardItemSmall>
                     <CardItemSmall>
-                        <CardButton className="is-primary" type="submit" disabled={!email || !password}>Login</CardButton>
+                        <CardButton inputColor = {!email || !password ? "#ebedef" : "#138d83d7"} inputWidht = "10%" type="submit" disabled={!email || !password}>Login</CardButton>
                     </CardItemSmall>
                     <CardItemSmall> 
                         <p style={{color: "red"}}>{error}</p>

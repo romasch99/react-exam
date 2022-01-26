@@ -19,10 +19,14 @@ export const Register = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        
+        console.log('Register');
+        console.log(email, password);
         if (!email || !password) return;
 
         const res = await Auth.register(email, password);
-
+        console.log(res);
+        console.log('Error: ' + res.err);
         if (res.err) {
             setError(res.err);
             return;
@@ -33,7 +37,7 @@ export const Register = () => {
    
     return (
         <Card width = "80%">
-            <CardHeader>Login</CardHeader>
+            <CardHeader>Register</CardHeader>
             <CardContent>
                 <form onSubmit={handleSubmit}>
                     <CardItemSmall>
@@ -43,7 +47,7 @@ export const Register = () => {
                         <Field label= "Password" onChange={onPasswordChange} name="password" type="password" placeholder="password" required minLength={8} />
                     </CardItemSmall>
                     <CardItemSmall>
-                        <CardButton className="is-primary" type="submit" disabled={!email || !password}>Login</CardButton>
+                        <CardButton  inputColor = {!email || !password ? "#ebedef" : "#138d83d7"} inputWidht = "10%" type="submit" disabled={!email || !password}>Register</CardButton>
                     </CardItemSmall>
                     <CardItemSmall> 
                         <p style={{color: "red"}}>{error}</p>
